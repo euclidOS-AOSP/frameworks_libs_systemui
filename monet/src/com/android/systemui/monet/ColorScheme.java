@@ -111,7 +111,7 @@ public class ColorScheme {
             default -> throw new IllegalArgumentException("Unknown style: " + style);
         };
 
-        final DynamicScheme bgScheme = switch (style) {
+         final DynamicScheme bgScheme = switch (style) {
             case ThemeStyle.SPRITZ -> new SchemeNeutral(bgSeedHct, isDark, contrastLevel);
             case ThemeStyle.TONAL_SPOT -> new SchemeTonalSpot(bgSeedHct, isDark, contrastLevel);
             case ThemeStyle.VIBRANT -> new SchemeVibrant(bgSeedHct, isDark, contrastLevel);
@@ -120,7 +120,7 @@ public class ColorScheme {
             case ThemeStyle.FRUIT_SALAD -> new SchemeFruitSalad(bgSeedHct, isDark, contrastLevel);
             case ThemeStyle.CONTENT -> new SchemeContent(bgSeedHct, isDark, contrastLevel);
             case ThemeStyle.MONOCHROMATIC -> new SchemeMonochrome(bgSeedHct, isDark, contrastLevel);
-            // SystemUI Schemes
+             // SystemUI Schemes
             case ThemeStyle.CLOCK -> new SchemeClock(bgSeedHct, isDark, contrastLevel);
             case ThemeStyle.CLOCK_VIBRANT -> new SchemeClockVibrant(bgSeedHct, isDark, contrastLevel);
             default -> throw new IllegalArgumentException("Unknown style: " + style);
